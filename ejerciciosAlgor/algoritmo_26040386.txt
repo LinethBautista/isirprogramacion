@@ -1,0 +1,35 @@
+algoritmo promedio_calificaciones
+
+// Tarea: Promedio de calificaciones
+// Alumna: Lineth Bautista - Matricula 26040386
+
+variables
+   calificaciones[5] : real
+   suma, promedio : real
+   i : entero
+
+inicio
+   suma <- 0
+
+   para i <- 1 hasta 5 hacer
+      imprimir "Ingrese la calificacion ", i, " = "
+      leer calificaciones[i]
+      suma <- suma + calificaciones[i]
+   finpara
+
+   promedio <- suma / 5
+
+   imprimirln "----------------------------------------"
+   imprimirln "Calificaciones ingresadas:"
+   para i <- 1 hasta 5 hacer
+      imprimir calificaciones[i], " "
+   finpara
+   imprimirln
+   imprimirln "Promedio general: ", promedio
+
+   si promedio >= 6 entonces
+      imprimirln "Resultado: APROBADO"
+   sino
+      imprimirln "Resultado: REPROBADO"
+   finsi
+fin
