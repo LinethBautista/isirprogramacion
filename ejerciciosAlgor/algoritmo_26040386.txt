@@ -1,35 +1,19 @@
-algoritmo promedio_calificaciones
-
-// Tarea: Promedio de calificaciones
-// Alumna: Lineth Bautista - Matricula 26040386
+algoritmo promedio_tres_calificaciones
 
 variables
-   calificaciones[5] : real
-   suma, promedio : real
-   i : entero
+   c1, c2, c3, promedio : real
 
 inicio
-   suma <- 0
+   imprimir "Ingrese la calificacion 1 = "
+   leer c1
 
-   para i <- 1 hasta 5 hacer
-      imprimir "Ingrese la calificacion ", i, " = "
-      leer calificaciones[i]
-      suma <- suma + calificaciones[i]
-   finpara
+   imprimir "Ingrese la calificacion 2 = "
+   leer c2
 
-   promedio <- suma / 5
+   imprimir "Ingrese la calificacion 3 = "
+   leer c3
 
-   imprimirln "----------------------------------------"
-   imprimirln "Calificaciones ingresadas:"
-   para i <- 1 hasta 5 hacer
-      imprimir calificaciones[i], " "
-   finpara
-   imprimirln
-   imprimirln "Promedio general: ", promedio
+   promedio <- (c1 + c2 + c3) / 3
 
-   si promedio >= 6 entonces
-      imprimirln "Resultado: APROBADO"
-   sino
-      imprimirln "Resultado: REPROBADO"
-   finsi
+   imprimirln "El promedio es: ", promedio
 fin
